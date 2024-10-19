@@ -1,0 +1,21 @@
+[package]
+name = "form_Rust"
+version = "0.1.0"
+edition = "2021"
+
+# Cette section définit le binaire principal
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+# Cette section permet de générer automatiquement des binaires pour tous les fichiers dans src/bin
+[[bin]]
+name = "bin"
+path = "src/bin/bin.rs"
+
+# Active la fonctionnalité de binaires automatiques
+[package.metadata.cargo-auto-bins]
+bin-dir = "src/bin"
+
+[dependencies]
+# Ajoutez ici vos dépendances si nécessaire
